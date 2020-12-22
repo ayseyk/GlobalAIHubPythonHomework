@@ -1,13 +1,13 @@
 message="5 values!"
 print(f'Enter {message}')
-
-a1=int(input("Enter the first value: "))
-a2=int(input("Enter the second value: "))
-a3=int(input("Enter the third value: "))
-a4=int(input("Enter the fourth value: "))
-a5=int(input("Enter thr fifth value: "))
+'''input fonksiyonu kullanıcıdan aldığı her değeri string tipine dönüştürür, ben kullanıcıdan çeşitli verilerin alımını ve tiplerinin gözlemlenmesi adına aşağıdaki şekilde farklı veri tiplerinde değer almayı sağlayacak bir kodlama yaptım.'''
+a1=float(input("Enter the first value (float): "))
+a2=input("Enter the second value (string): ")
+a3=int(input("Enter the third value (integer): "))
+a4=input("Enter the fourth value (string): ")
+a5=int(input("Enter thr fifth value (integer): "))
 
 print("Your values and their types are:\n {} {} {} {} {} ".format(a1,a2,a3,a4,a5,))
 
-text="Type:"
+text="ValueType:"
 print(   f'first{text}',type(a1),"\n",f'second{text}',type(a2), "\n",f'third{text}',type(a3),"\n",f'fourth{text}',type(a4), "\n",f'fifth{text}',type(a5),"\n")
