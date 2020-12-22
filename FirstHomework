@@ -1,0 +1,13 @@
+message="5 values!"
+print(f'Enter {message}')
+
+a1=int(input("Enter the first value: "))
+a2=int(input("Enter the second value: "))
+a3=int(input("Enter the third value: "))
+a4=int(input("Enter the fourth value: "))
+a5=int(input("Enter thr fifth value: "))
+
+print("Your values and their types are:\n {} {} {} {} {} ".format(a1,a2,a3,a4,a5,))
+
+text="Type:"
+print(   f'first{text}',type(a1),"\n",f'second{text}',type(a2), "\n",f'third{text}',type(a3),"\n",f'fourth{text}',type(a4), "\n",f'fifth{text}',type(a5),"\n")
