@@ -1,0 +1,18 @@
+print('Please enter your information!')
+infolist=[]
+a=input("Enter your first name: ")
+infolist.append(a)
+a=input("Enter your last name: ")
+infolist.append(a)
+a=int(input("Enter your age: "))
+infolist.append(a)
+a=int(input("Enter your date of birth(just year): "))
+infolist.append(a)
+print("Your informations are: ")
+i=0
+for i in range(4):
+    print(" ",infolist[i])
+if infolist[2] < 18:
+    print("You can't go out because it's too dangerous!")
+else:
+    print("You can go out to the street!") 
