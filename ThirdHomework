@@ -1,0 +1,20 @@
+import random as rnd
+point=0
+life=3
+name=input("Please give me your name: ")
+print("******* Welcome to the game",name.upper(),"!!*******. \n\n<<<< When you give 3 uncorrect answers you will die! >>>>")
+print("LET'S START!!")
+for x in range(5):
+  guess = int(input("Please enter your guess(from 1 to 3):"))
+  secret = rnd.randint(1,3)
+  if guess == secret:
+    print("--***You are on your lucky day***-- GO ON! \n")
+    point=point+1
+  else:
+      print("--***WRONG***-- GO ON!! Your life is getting shorter!! \n")
+      life=life-1
+      if  (life == 0):
+         print("^^^^^^YOU DIED!!^^^^^^^\n")
+         break 
+  
+print("Your point is: ",point)
