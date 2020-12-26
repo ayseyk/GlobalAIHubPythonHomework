@@ -1,14 +1,14 @@
-person_real=["Ayşe","Ykaya"]
 person=[]
 a=0
 finish=False
+
 for i in range(3):
     person=input("Please enter your name and your surname: ")
     name=person.upper()
-    
     a+=1
-    if  name=="AYŞE YKAYA":
+    if  name=="AYŞE YALÇINKAYA":
         print("Welcome",name,"!!")
+        print("\n")
         break
     elif a==3:
          print("Please try again later!!")
@@ -22,6 +22,7 @@ if finish:
 
 lessons=[]
 my_lessons=[]
+
 def lesson_func():
     return("You failed in class!!")
      
@@ -29,9 +30,9 @@ for k in range(5):
     lessons.append(input("Please enter your lessons: "))
 print("\n ")
     
-j=0
 number=int(input("How many lessons do you take? : "))
 print("\n ")
+
 if  3 <= number <= 5:
     for j in range(number):
         lesson=input("Please enter your lesson name: ")
@@ -39,32 +40,48 @@ if  3 <= number <= 5:
             my_lessons.append(lesson)
         else:
             print("Invalid lesson! Please login again!")
+            finish=True
             break
+        
 elif number < 3:
     print(lesson_func())
+    
 else: print("Invalid number! You can take a minimum of 3 and a maximum of 5 lessons!!")   
 
+if finish:
+    import sys
+    sys.exit()
+
+control=True
 print("\n")
 
-exam_lesson=my_lessons[2]
-print("***Your passing status is for this lesson ----> ",exam_lesson)
+while control:
+    exam_lesson=input("Enter your lesson name to see your passing status: ")
+    if exam_lesson in my_lessons:
+       control=False
+    else:
+       print("Invalid lesson! Please choose from this list: ",my_lessons)
+   
+grades={}
 
-grades={"midterm":1,"final":10,"project":10}
-nt1= grades["midterm"]*30/100
-nt2= grades["final"]*50/100
-nt3= grades["project"]*20/100
-note=nt1+nt2+nt3
+grades["midterm"]=int(input("Enter your midterm note: "))
+grades["final"]=int(input("Enter your final note: "))
+grades["project"]=int(input("Enter your project note: "))
+
+note=grades["midterm"]*30/100+grades["final"]*50/100+grades["project"]*20/100
 
 print("\n ")
 
 if note >= 90:
-    print("**AA** Congratulations!! You passed your lesson.")
+    print("**AA** Congratulations!! You passed this lesson.")
 elif 70 < note < 90:
-    print("**BB** Congratulations!! You passed your lesson.")
+    print("**BB** Congratulations!! You passed this lesson.")
 elif 50 < note < 70:
-    print("**CC** Congratulations!! You passed your lesson.")
+    print("**CC** Congratulations!! You passed this lesson.")
 elif 30 < note < 50:
-    print("**DD** Congratulations!! You passed your lesson.")
+    print("**DD** Congratulations!! You passed this lesson.")
 else:
-    print("**FF** Unfortunately you didn't pass your lesson.")
+    print("**FF** Unfortunately you didn't pass this lesson.")
+    
+
     
