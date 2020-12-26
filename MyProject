@@ -18,7 +18,7 @@ for i in range(3):
         
 if finish:
     import sys
-    sys.exit()
+    sys.exit() #İnternetten yaptığım araştırmalar sonucu bulduğum bir fonksiyon.Yanlış bir durum söz konusu olduğunda programın koşmasını durduruyor. Kodumda 2 yerde kullandım.
 
 lessons=[]
 my_lessons=[]
