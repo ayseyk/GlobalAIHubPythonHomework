@@ -1,0 +1,70 @@
+person_real=["Ayşe","Ykaya"]
+person=[]
+a=0
+finish=False
+for i in range(3):
+    person=input("Please enter your name and your surname: ")
+    name=person.upper()
+    
+    a+=1
+    if  name=="AYŞE YKAYA":
+        print("Welcome",name,"!!")
+        break
+    elif a==3:
+         print("Please try again later!!")
+         finish=True
+         break
+    else:  print("Please try again!") 
+        
+if finish:
+    import sys
+    sys.exit()
+
+lessons=[]
+my_lessons=[]
+def lesson_func():
+    return("You failed in class!!")
+     
+for k in range(5):
+    lessons.append(input("Please enter your lessons: "))
+print("\n ")
+    
+j=0
+number=int(input("How many lessons do you take? : "))
+print("\n ")
+if  3 <= number <= 5:
+    for j in range(number):
+        lesson=input("Please enter your lesson name: ")
+        if lesson in lessons:
+            my_lessons.append(lesson)
+        else:
+            print("Invalid lesson! Please login again!")
+            break
+elif number < 3:
+    print(lesson_func())
+else: print("Invalid number! You can take a minimum of 3 and a maximum of 5 lessons!!")   
+
+print("\n")
+
+exam_lesson=my_lessons[2]
+print("***Your passing status is for this lesson ----> ",exam_lesson)
+
+grades={"midterm":1,"final":10,"project":10}
+nt1= grades["midterm"]*30/100
+nt2= grades["final"]*50/100
+nt3= grades["project"]*20/100
+note=nt1+nt2+nt3
+
+print("\n ")
+
+if note >= 90:
+    print("**AA** Congratulations!! You passed your lesson.")
+elif 70 < note < 90:
+    print("**BB** Congratulations!! You passed your lesson.")
+elif 50 < note < 70:
+    print("**CC** Congratulations!! You passed your lesson.")
+elif 30 < note < 50:
+    print("**DD** Congratulations!! You passed your lesson.")
+else:
+    print("**FF** Unfortunately you didn't pass your lesson.")
+    
